@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ngazi | Learn English Step by Step</title>
+
+    <meta
+        name="description"
+        content="Download Inglishika Grammar and Inglishika Vocabulary — simple English learning apps for Swahili speakers."
+    >
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7f9;
+            color: #003B44;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: #003B44;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: #FF6A33;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #FF6A33;
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 85px 20px 70px;
+            background: white;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 7vw, 64px);
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: #003B44;
+        }
+
+        .hero h1 span {
+            color: #FF6A33;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: auto;
+            font-size: 19px;
+            color: #53666b;
+        }
+
+        /* Apps */
+        .apps {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 65px 20px 90px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 34px;
+            margin-bottom: 8px;
+        }
+
+        .section-title p {
+            color: #66777b;
+        }
+
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .app-card {
+            background: white;
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 8px 30px rgba(0, 59, 68, 0.08);
+            border: 1px solid #e8edef;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .app-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 59, 68, 0.13);
+        }
+
+        .app-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 18px;
+            background: #003B44;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 31px;
+            font-weight: bold;
+            margin-bottom: 22px;
+        }
+
+        .app-card h3 {
+            font-size: 27px;
+            margin-bottom: 10px;
+        }
+
+        .app-card p {
+            color: #607277;
+            margin-bottom: 25px;
+            min-height: 55px;
+        }
+
+        .features {
+            list-style: none;
+            margin-bottom: 28px;
+        }
+
+        .features li {
+            margin-bottom: 9px;
+            color: #40565b;
+        }
+
+        .features li::before {
+            content: "✓";
+            color: #FF6A33;
+            font-weight: bold;
+            margin-right: 9px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            background: #FF6A33;
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 16px;
+            transition: background 0.2s ease;
+        }
+
+        .download-btn:hover {
+            background: #e95622;
+        }
+
+        /* About */
+        .about {
+            background: #003B44;
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .about h2 {
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+        .about p {
+            max-width: 650px;
+            margin: auto;
+            color: #d9e5e7;
+            font-size: 17px;
+        }
+
+        /* Footer */
+        footer {
+            background: #002c33;
+            color: #aebfc2;
+            text-align: center;
+            padding: 25px 20px;
+            font-size: 14px;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+        /* Mobile */
+        @media (max-width: 700px) {
+
+            header {
+                padding: 16px 20px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .hero {
+                padding: 65px 20px 55px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .app-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .app-card {
+                padding: 28px;
+            }
+
+            .section-title h2 {
+                font-size: 29px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        ngazi<span>.</span>net
+    </div>
+
+    <nav>
+        <a href="#apps">Apps</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
+
+
+<main>
+
+    <!-- Hero -->
+    <section class="hero">
+
+        <h1>
+            Learn English.<br>
+            <span>Step by Step.</span>
+        </h1>
+
+        <p>
+            Simple English learning apps designed to help Swahili speakers
+            improve their grammar and vocabulary.
+        </p>
+
+    </section>
+
+
+    <!-- Apps -->
+    <section class="apps" id="apps">
+
+        <div class="section-title">
+            <h2>Our Apps</h2>
+            <p>Choose an app and start learning.</p>
+        </div>
+
+
+        <div class="app-grid">
+
+            <!-- Grammar -->
+            <article class="app-card">
+
+                <div class="app-icon">
+                    G
+                </div>
+
+                <h3>Inglishika Grammar</h3>
+
+                <p>
+                    Build your English grammar skills through clear
+                    explanations and interactive exercises.
+                </p>
+
+                <ul class="features">
+                    <li>English grammar lessons</li>
+                    <li>Interactive exercises</li>
+                    <li>Practice your sentence skills</li>
+                    <li>Designed for Swahili speakers</li>
+                </ul>
+
+                <a
+                    class="download-btn"
+                    href="downloads/inglishika-grammar.apk"
+                    download
+                >
+                    Download Grammar
+                </a>
+
+            </article>
+
+
+            <!-- Vocabulary -->
+            <article class="app-card">
+
+                <div class="app-icon">
+                    V
+                </div>
+
+                <h3>Inglishika Vocabulary</h3>
+
+                <p>
+                    Learn useful English words and build a stronger
+                    vocabulary through practice.
+                </p>
+
+                <ul class="features">
+                    <li>Vocabulary lessons</li>
+                    <li>Interactive word exercises</li>
+                    <li>Practice and review</li>
+                    <li>Learn at your own pace</li>
+                </ul>
+
+                <a
+                    class="download-btn"
+                    href="downloads/inglishika-vocabulary.apk"
+                    download
+                >
+                    Download Vocabulary
+                </a>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section class="about" id="about">
+
+        <h2>About Ngazi</h2>
+
+        <p>
+            Ngazi is a learning platform focused on making English
+            learning simple, practical and accessible.
+            Our goal is to help learners climb from one level to the next.
+        </p>
+
+    </section>
+
+</main>
+
+
+<footer>
+    <p>
+        © 2026 <strong>Ngazi.net</strong>. All rights reserved.
+    </p>
+</footer>
+
+</body>
+</html>
