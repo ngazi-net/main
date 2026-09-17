@@ -12,11 +12,20 @@
     >
 
     <style>
+        /* =========================================
+           RESET
+        ========================================= */
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
+
+
+        /* =========================================
+           BASE — MOBILE FIRST
+        ========================================= */
 
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -25,24 +34,33 @@
             line-height: 1.6;
         }
 
-        /* Header */
+
+        /* =========================================
+           HEADER
+        ========================================= */
+
         header {
             background: #003B44;
             color: white;
-            padding: 18px 7%;
+            padding: 16px 20px;
+
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
 
         .logo {
-            font-size: 28px;
+            font-size: 25px;
             font-weight: 800;
             letter-spacing: -1px;
         }
 
         .logo span {
             color: #FF6A33;
+        }
+
+        nav {
+            display: none;
         }
 
         nav a {
@@ -56,17 +74,21 @@
             color: #FF6A33;
         }
 
-        /* Hero */
+
+        /* =========================================
+           HERO
+        ========================================= */
+
         .hero {
             text-align: center;
-            padding: 85px 20px 70px;
+            padding: 60px 20px 50px;
             background: white;
         }
 
         .hero h1 {
-            font-size: clamp(38px, 7vw, 64px);
+            font-size: 40px;
             line-height: 1.1;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
             color: #003B44;
         }
 
@@ -77,44 +99,61 @@
         .hero p {
             max-width: 650px;
             margin: auto;
-            font-size: 19px;
+            font-size: 17px;
             color: #53666b;
         }
 
-        /* Apps */
+
+        /* =========================================
+           APPS SECTION
+        ========================================= */
+
         .apps {
-            max-width: 1050px;
+            width: 100%;
             margin: 0 auto;
-            padding: 65px 20px 90px;
+            padding: 50px 20px 65px;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         .section-title h2 {
-            font-size: 34px;
-            margin-bottom: 8px;
+            font-size: 30px;
+            margin-bottom: 6px;
         }
 
         .section-title p {
             color: #66777b;
+            font-size: 16px;
         }
+
+
+        /* One column by default — mobile first */
 
         .app-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
+            grid-template-columns: 1fr;
+            gap: 20px;
         }
+
+
+        /* =========================================
+           APP CARD
+        ========================================= */
 
         .app-card {
             background: white;
-            border-radius: 20px;
-            padding: 35px;
+            border-radius: 18px;
+            padding: 25px 22px;
+
             box-shadow: 0 8px 30px rgba(0, 59, 68, 0.08);
             border: 1px solid #e8edef;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
         }
 
         .app-card:hover {
@@ -122,34 +161,70 @@
             box-shadow: 0 15px 35px rgba(0, 59, 68, 0.13);
         }
 
+
+        /* =========================================
+           APP LOGO
+        ========================================= */
+
+        .logo-card {
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo-card img {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin: 0 auto;
+        }
+
+
+        /* =========================================
+           OPTIONAL APP ICON
+        ========================================= */
+
         .app-icon {
             width: 70px;
             height: 70px;
             border-radius: 18px;
             background: #003B44;
             color: white;
+
             display: flex;
             align-items: center;
             justify-content: center;
+
             font-size: 31px;
             font-weight: bold;
             margin-bottom: 22px;
         }
 
+
+        /* =========================================
+           APP TEXT
+        ========================================= */
+
         .app-card h3 {
-            font-size: 27px;
+            font-size: 25px;
             margin-bottom: 10px;
         }
 
         .app-card p {
             color: #607277;
-            margin-bottom: 25px;
-            min-height: 55px;
+            margin-bottom: 22px;
         }
+
+
+        /* =========================================
+           FEATURES
+        ========================================= */
 
         .features {
             list-style: none;
-            margin-bottom: 28px;
+            margin-bottom: 25px;
         }
 
         .features li {
@@ -164,17 +239,27 @@
             margin-right: 9px;
         }
 
+
+        /* =========================================
+           DOWNLOAD BUTTON
+        ========================================= */
+
         .download-btn {
-            display: inline-block;
+            display: block;
             width: 100%;
+
             text-align: center;
+
             background: #FF6A33;
             color: white;
             text-decoration: none;
+
             padding: 14px 20px;
             border-radius: 10px;
+
             font-weight: bold;
             font-size: 16px;
+
             transition: background 0.2s ease;
         }
 
@@ -182,32 +267,45 @@
             background: #e95622;
         }
 
-        /* About */
+
+        /* =========================================
+           ABOUT
+        ========================================= */
+
         .about {
             background: #003B44;
             color: white;
             text-align: center;
-            padding: 20px;
+
+            padding: 45px 20px;
         }
 
         .about h2 {
-            font-size: 34px;
+            font-size: 30px;
             margin-bottom: 15px;
         }
 
         .about p {
             max-width: 650px;
             margin: auto;
+
             color: #d9e5e7;
-            font-size: 17px;
+            font-size: 16px;
         }
 
-        /* Footer */
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
         footer {
             background: #002c33;
             color: #aebfc2;
+
             text-align: center;
-            padding: 25px 20px;
+
+            padding: 22px 20px;
+
             font-size: 14px;
         }
 
@@ -215,53 +313,151 @@
             color: white;
         }
 
-        /* Mobile */
-        @media (max-width: 700px) {
+
+        /* =========================================
+           TABLET
+           600px and above
+        ========================================= */
+
+        @media (min-width: 600px) {
 
             header {
-                padding: 16px 20px;
-            }
-
-            nav {
-                display: none;
+                padding: 18px 5%;
             }
 
             .hero {
-                padding: 65px 20px 55px;
+                padding: 70px 30px 60px;
+            }
+
+            .hero h1 {
+                font-size: 50px;
             }
 
             .hero p {
-                font-size: 17px;
+                font-size: 18px;
             }
 
-            .app-grid {
-                grid-template-columns: 1fr;
+            .apps {
+                padding: 60px 30px 75px;
             }
 
             .app-card {
-                padding: 28px;
+                padding: 30px;
             }
 
             .section-title h2 {
-                font-size: 29px;
+                font-size: 32px;
             }
 
-            .logo-card {
-            display: inline-block;
-            width: 100%;
-            color: white;
-            text-decoration: none;
-            padding: 6px 8px;
-            border-radius: 10px;
-            transition: background 0.2s ease;
+            .about {
+                padding: 50px 30px;
+            }
         }
+
+
+        /* =========================================
+           DESKTOP
+           768px and above
+        ========================================= */
+
+        @media (min-width: 768px) {
+
+            header {
+                padding: 18px 7%;
+            }
+
+            nav {
+                display: block;
+            }
+
+            .hero {
+                padding: 80px 30px 70px;
+            }
+
+            .hero h1 {
+                font-size: clamp(48px, 7vw, 64px);
+                margin-bottom: 20px;
+            }
+
+            .hero p {
+                font-size: 19px;
+            }
+
+            .apps {
+                max-width: 1050px;
+                padding: 65px 20px 90px;
+            }
+
+            .section-title {
+                margin-bottom: 40px;
+            }
+
+            .section-title h2 {
+                font-size: 34px;
+            }
+
+            .app-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+
+            .app-card {
+                border-radius: 20px;
+                padding: 35px;
+            }
+
+            .app-card h3 {
+                font-size: 27px;
+            }
+
+            .app-card p {
+                min-height: 55px;
+                margin-bottom: 25px;
+            }
+
+            .features {
+                margin-bottom: 28px;
+            }
+
+            .about {
+                padding: 20px;
+            }
+
+            .about h2 {
+                font-size: 34px;
+            }
+
+            .about p {
+                font-size: 17px;
+            }
+
+            footer {
+                padding: 25px 20px;
+            }
         }
+
+
+        /* =========================================
+           LARGE DESKTOP
+           1100px and above
+        ========================================= */
+
+        @media (min-width: 1100px) {
+
+            .hero {
+                padding-top: 85px;
+                padding-bottom: 70px;
+            }
+
+        }
+
     </style>
 </head>
 
 <body>
 
 <header>
+
     <div class="logo">
         ngazi<span>.</span>net
     </div>
@@ -270,6 +466,7 @@
         <a href="#apps">Apps</a>
         <a href="#about">About</a>
     </nav>
+
 </header>
 
 
@@ -295,8 +492,13 @@
     <section class="apps" id="apps">
 
         <div class="section-title">
+
             <h2>Our Apps</h2>
-            <p>Choose an app and start learning.</p>
+
+            <p>
+                Choose an app and start learning.
+            </p>
+
         </div>
 
 
@@ -306,10 +508,19 @@
             <article class="app-card">
 
                 <div class="logo-card">
-                    <img src="inglishika-grammar.png" alt="inglishika-Vocabulary-logo" width="300" height="200">
+
+                    <img
+                        src="inglishika-grammar.png"
+                        alt="Inglishika Grammar logo"
+                        width="300"
+                        height="200"
+                    >
+
                 </div>
 
-                <h3>Inglishika Grammar</h3>
+                <h3>
+                    Inglishika Grammar
+                </h3>
 
                 <p>
                     Build your English grammar skills through clear
@@ -317,15 +528,17 @@
                 </p>
 
                 <ul class="features">
+
                     <li>English grammar lessons</li>
                     <li>Interactive exercises</li>
                     <li>Practice your sentence skills</li>
                     <li>Designed for Swahili speakers</li>
+
                 </ul>
 
                 <a
                     class="download-btn"
-                    href="https://github.com/ngazi-net/grammar/releases/latest/download/Inglishika-grammar.apk "
+                    href="https://github.com/ngazi-net/grammar/releases/latest/download/Inglishika-grammar.apk"
                     download
                 >
                     Download Grammar
@@ -338,8 +551,19 @@
             <article class="app-card">
 
                 <div class="logo-card">
-                    <img src="inglishika-vocabulary.png" alt="Vocabulary-Vocabulary-logo" width="300" height="200">
+
+                    <img
+                        src="inglishika-vocabulary.png"
+                        alt="Inglishika Vocabulary logo"
+                        width="300"
+                        height="200"
+                    >
+
                 </div>
+
+                <h3>
+                    Inglishika Vocabulary
+                </h3>
 
                 <p>
                     Learn useful English words and build a stronger
@@ -347,10 +571,12 @@
                 </p>
 
                 <ul class="features">
+
                     <li>Vocabulary lessons</li>
                     <li>Interactive word exercises</li>
                     <li>Practice and review</li>
                     <li>Learn at your own pace</li>
+
                 </ul>
 
                 <a
@@ -371,7 +597,9 @@
     <!-- About -->
     <section class="about" id="about">
 
-        <h2>About Ngazi</h2>
+        <h2>
+            About Ngazi
+        </h2>
 
         <p>
             Ngazi is a learning platform focused on making English
@@ -385,9 +613,11 @@
 
 
 <footer>
+
     <p>
         © 2026 <strong>Ngazi.net</strong>. All rights reserved.
     </p>
+
 </footer>
 
 </body>
